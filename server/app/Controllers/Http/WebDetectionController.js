@@ -41,28 +41,33 @@ class WebDetectionController {
       }
     };
 
-    console.log(`Analying image...`);
-    // Detect similar images on the web to a local file
-    const [result] = await client.webDetection(gcrequest);
-    const webDetection = result.webDetection;
-
-    let pokeName;
-    webDetection.webEntities.forEach(entity => {
-      if (!entity.description.includes("Pokémon") && !pokeName) {
-        pokeName = entity.description.toLocaleLowerCase();
-      }
-      // console.log(`Score: ${entity.score}`);
-      // console.log(`Description: ${entity.description}`);
-    });
-
     try {
+      console.log(`Analying image...`);
+      // Detect similar images on the web to a local file
+      const [result] = await client.webDetection(gcrequest);
+      const webDetection = result.webDetection;
+
+      let pokeName;
+      webDetection.webEntities.forEach(entity => {
+        const names = entity.description.trim().split(" ");
+        if (
+          !entity.description.includes("Pokémon") &&
+          names.length === 1 &&
+          !pokeName
+        ) {
+          pokeName = entity.description.toLocaleLowerCase();
+        }
+        // console.log(`Score: ${entity.score}`);
+        // console.log(`Description: ${entity.description}`);
+      });
+    
       const P = new Pokedex();
       const res = await P.getPokemonByName(pokeName);
 
       const { id, name, types } = res;
       return { id, name, types };
     } catch (err) {
-      return response.json("Pokemon não encontrado");
+      return response.status(500);
     }
   }
 }
