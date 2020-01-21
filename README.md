@@ -14,6 +14,12 @@
   <a href="#-configuration">Configuration</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
+<p align="center">
+  <img alt="Screenshot01" src=".github/poke001.jpg" width="20%">&nbsp;&nbsp;
+  <img alt="Screenshot02" src=".github/poke002.jpg" width="20%">&nbsp;&nbsp;
+  <img alt="Screenshot03" src=".github/poke003.jpg" width="20%">
+</p>
+
 ## Technologies
 
 This project was developed with the following technologies:
