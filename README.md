@@ -1,6 +1,32 @@
-# PokéDex
+<h4 align="center">
+  PokéDex
+</h4>
 
-Take a picture of a Pokémon to discover his name and type
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/edscaylart/pokedex-rn-gcv">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/edscaylart/pokedex-rn-gcv">
+</p>
+
+<p align="center">
+  <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-configuration">Configuration</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
+
+## Technologies
+
+This project was developed with the following technologies:
+
+- [AdonisJs](https://adonisjs.com/)
+- [React](https://reactjs.org)
+- [React Native](https://facebook.github.io/react-native/)
+- [Expo](https://expo.io/)
+- [Google Vision API](https://cloud.google.com/vision/)
+- [PokéAPI](https://pokeapi.co/)
 
 ## Installation
 
@@ -18,7 +44,7 @@ cd ..
 cd ./PokeDex && yarn
 ```
 
-## Server Configuration
+## Configuration
 
 Copy the file `.env.example` into `.env`
 
